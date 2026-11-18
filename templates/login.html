@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Қызметкерлерге кіру{% endblock %}
+{% block body %}
+<section class="admin-card admin-login">
+  <h1>Қызметкерлерге кіру</h1>
+  {% if error %}<p class="admin-message error" role="alert">{{ error }}</p>{% endif %}
+  <form method="post">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    <label>Логин<input name="username" autocomplete="username" maxlength="80" required></label>
+    <label>Құпиясөз<input name="password" type="password" autocomplete="current-password" maxlength="256" required></label>
+    <button class="primary" type="submit">Кіру</button>
+  </form>
+</section>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="admin-card">
+  <h1>Бұл бет жаңартылып қойған</h1>
+  <p>Басқа қызметкердің өзгерістері сақталған. Соңғы нұсқаны ашып, өзгерістеріңізді қайта енгізіңіз.</p>
+  <a href="{{ url_for('edit', page=page) }}">Соңғы нұсқаны ашу ↗</a>
+</section>
+{% endblock %}

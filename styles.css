@@ -170,3 +170,33 @@ footer { background: #0b222a; color: #c6d8da; padding-block: 20px; font-size: 13
 .example-content h3 { font-size: 18px; }
 .example-content p { margin-top: 7px; color: var(--muted); line-height: 1.6; overflow-wrap: anywhere; }
 .related-link { display: inline-block; margin-top: 10px; color: var(--teal); font-weight: 700; }
+
+.hero h1, .example-content p { white-space: pre-line; }
+.example-content + .example-content { margin-top: 12px; }
+.admin-header { background: #11323b; color: white; padding-block: 18px; }
+.admin-top, .admin-actions { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.admin-main { max-width: 1000px; padding-block: 36px 56px; }
+.admin-main h1 { font-size: clamp(28px, 5vw, 45px); margin: 0 0 12px; line-height: 1.1; }
+.admin-main h2 { font-size: 23px; margin: 0 0 16px; }
+.admin-heading { margin-bottom: 20px; }
+.admin-navigation { margin-bottom: 20px; }
+.admin-card { border: 1px solid #dfe8e5; border-radius: 16px; padding: clamp(16px, 4vw, 28px); margin: 0 0 16px; background: white; }
+.admin-login { max-width: 440px; margin: 24px auto; }
+.admin-main label { display: block; font-size: 14px; font-weight: 650; margin-bottom: 12px; }
+.admin-main input:not([type="hidden"]), .admin-main textarea, .admin-main select {
+  display: block; width: 100%; margin-top: 5px; padding: 9px 11px; font: inherit; font-weight: 400;
+  color: var(--ink); background: white; border: 1px solid #a6bfba; border-radius: 8px;
+}
+.admin-main textarea { resize: vertical; }
+.admin-main button { cursor: pointer; font-family: inherit; }
+.admin-main button:disabled { opacity: .55; cursor: default; }
+.admin-main button.primary { border: 0; }
+.admin-fields, .admin-link-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; }
+.admin-record { margin-bottom: 12px; background: var(--paper); border-radius: 10px; padding: 14px; }
+.admin-quiet { border: 1px solid #a6bfba; color: var(--teal); background: white; border-radius: 8px; padding: 8px 12px; }
+.admin-message { margin: 12px 0; padding: 10px 14px; border-radius: 8px; background: #dff3eb; }
+.admin-message.error { background: #fbe6e8; color: #862a3a; }
+.admin-actions { justify-content: flex-start; color: var(--teal); }
+@media (max-width: 600px) {
+  .admin-fields, .admin-link-fields { grid-template-columns: minmax(0, 1fr); }
+}
